@@ -1,0 +1,85 @@
+.app_header {
+  width: 100%;
+  display: inline-flex;
+  height: 100%;
+}
+
+.ah_logo_wrapper {
+  width: 50px;
+  flex: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .ah_logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background-color: #ccc;
+  }
+}
+
+.ah_info_wrapper {
+  flex: 1;
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 30px;
+
+  .ah_info_data_selector {
+    flex: 3;
+    line-height: 50px;
+  }
+
+  .ah_info_title {
+    flex: 5;
+    line-height: 50px;
+    text-align: center;
+  }
+}
+
+.ah_tool_wrapper {
+  flex: none;
+
+  > div {
+    text-align: center;
+    line-height: 50px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+  }
+
+  .ah_tool_bell_cell {
+    position: relative;
+    .bell_info_counter {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 5px;
+      height: 5px;
+      background-color: #f00;
+    }
+  }
+
+  .ah_tool_user_cell {
+    text-align: center;
+    .ah_user_circle {
+      display: inline-block;
+      vertical-align: middle;
+      width: 30px;
+      height: 30px;
+      background-color: #999;
+      border-radius: 50%;
+
+      > span {
+        display: inline-block;
+        line-height: 30px;
+      }
+
+      &::before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+}

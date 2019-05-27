@@ -1,0 +1,20 @@
+.dashboard_section {
+  flex: 1;
+  background-color: #f1f1f1;
+  box-sizing: border-box;
+  padding: 35px;
+  display: flex;
+}
+
+.dbs_main_second_wrapper {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+}
+
+.dbs_thrid_wrapper {
+  flex: 3;
+  margin-left: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+}

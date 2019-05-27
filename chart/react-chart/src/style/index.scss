@@ -1,0 +1,31 @@
+// preset and default
+@import './preset/color';
+@import './preset/text';
+@import './preset/reset';
+@import './preset/mixin';
+
+// nav
+@import './components/app';
+@import './components/header';
+@import './components/nav';
+@import './components/dashboard';
+@import './components/mainMonitor';
+@import './components/secondMonitor';
+@import './components/thirdMonitor';
+@import './components/monitorHeader';
+
+// 全域rwd設定
+@include rwd(mobile) {
+}
+
+@include rwd(tablet_portrait) {
+}
+
+@include rwd(tablet_landscape) {
+}
+
+@include rwd(pc_normal) {
+}
+
+@include rwd(pc_large) {
+}
