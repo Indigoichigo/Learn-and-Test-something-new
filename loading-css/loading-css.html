@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .loading_bar_wrapper {
+        text-align: center;
+      }
+      .bar {
+        width: 1px;
+        height: 70px;
+        background-color: #ccc;
+        display: inline-block;
+        margin: 0 3px;
+      }
+
+      .bar1 {
+        animation: barAnimate 1s 0s infinite alternate-reverse;
+      }
+
+      .bar2 {
+        animation: barAnimate 1s 0.1s infinite alternate-reverse;
+      }
+
+      .bar3 {
+        animation: barAnimate 1s 0.2s infinite alternate-reverse;
+      }
+
+      .bar4 {
+        animation: barAnimate 1s 0.3s infinite alternate-reverse;
+      }
+
+      .bar5 {
+        animation: barAnimate 1s 0.4s infinite alternate-reverse;
+      }
+
+      .bar6 {
+        animation: barAnimate 1s 0.5s infinite alternate-reverse;
+      }
+
+      .bar7 {
+        animation: barAnimate 1s 0.6s infinite alternate-reverse;
+      }
+
+      .bar8 {
+        animation: barAnimate 1s 0.7s infinite alternate-reverse;
+      }
+
+      .bar9 {
+        animation: barAnimate 1s 0.8s infinite alternate-reverse;
+      }
+
+      .bar10 {
+        animation: barAnimate 1s 0.9s infinite alternate-reverse;
+      }
+
+      @keyframes barAnimate {
+        from {
+          transform: scaleY(0);
+        }
+
+        to {
+          transform: scaleY(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loading_bar_wrapper">
+      <div class="bar bar1"></div>
+      <div class="bar bar2"></div>
+      <div class="bar bar3"></div>
+      <div class="bar bar4"></div>
+      <div class="bar bar5"></div>
+      <div class="bar bar6"></div>
+      <div class="bar bar7"></div>
+      <div class="bar bar8"></div>
+      <div class="bar bar9"></div>
+      <div class="bar bar10"></div>
+    </div>
+  </body>
+</html>

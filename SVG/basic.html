@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        height: 100px;
+        overflow: hidden;
+      }
+      svg {
+        border: 1px solid #123efa;
+      }
+
+      .test1 {
+        fill: #f00;
+        stroke: #fff;
+        stroke-width: 3px;
+      }
+
+      .test2 {
+        stroke: #fff;
+        stroke-width: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="500" height="300">
+      <!-- <path d="M100 100, L100 50, A50 50 0 0 0 50 100,Z" fill="#fa0"></path>
+      <path d="M100 100, L100 50, A50 50 0 0 1 150 100,Z" fill="#ca0"></path>
+      <path d="M100 100, L100 150, A50 50 0 0 0 150 100,Z" fill="#ac0"></path>
+      <path d="M100 100, L100 150, A50 50 0 0 1 50 100,Z" fill="#afc"></path> -->
+
+      <path class="test1" d="M100 100, L100 50, A50 50 0 0 1 150 100, Z"></path>
+      <path class="test2" d="M100 100, L150 100, A50 50 0 1 1 100 50, Z" fill="#f00"></path>
+    </svg>
+</html>

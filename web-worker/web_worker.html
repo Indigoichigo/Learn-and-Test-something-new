@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // if ('serviceWorker' in navigator) {
+      //   navigator.serviceWorker
+      //     .register('/test_run_worker.js')
+      //     .then(function(reg) {
+      //       console.log('register is running');
+      //     })
+      //     .catch(function(err) {
+      //       console.log('web worker failed');
+      //     });
+      // }
+      if ('serviceWorker' in navigator) {
+        console.log('y');
+        navigator.serviceWorker
+          .register('./test_run_worker.js') // 註冊 Service Worker
+          .then(function(reg) {
+            console.log('Registration succeeded. Scope is ' + reg.scope); // 註冊成功
+          })
+          .catch(function(error) {
+            console.log('Registration failed with ' + error); // 註冊失敗
+          });
+      }
+    </script>
+  </body>
+</html>
