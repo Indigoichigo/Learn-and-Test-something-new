@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>My first shader</title>
+  <!-- buffers 將資料放到緩衝區中，GPU需要時從緩衝區取得 -->
+  <!-- attribute 將資料從緩衝區取得，我們透過attribute取得資料 -->
+  <script id="shader-fs" type="x-shader/x-fragment">
+    // shader program
+    precision mediump float;
+    uniform vec4 color;
+    void main(void) {
+      gl_FragColor = color;
+    }
+  </script>
+  
+  <script id="shader-vs" type="x-shader/x-vertex">
+    // 我們在這裡撰寫 GSGL
+    // vec4 代表一個向量，接收四個參數(x,y,z,w)
+    // 0,0,0 在 3d 座標中代表中心
+    
+    attribute vec4 position;
+    attribute float size;
+    
+    void main(void) {
+      gl_Position = position;
+      gl_PointSize = size;
+    }
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #ddd;
+    }
+    
+    canvas {
+      border: 1px solid #111;
+    }
+  </style>
+ 
+</head>
+<body>
+  <canvas width="600" height="600" id="canvas">
+      <script src="./basic.js"></script>
+</body>
+
+</html>

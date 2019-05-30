@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .circle {
+        stroke-dasharray: 502;
+
+        animation: dashReverse 1s linear;
+      }
+
+      .circle:hover {
+        stroke: #ff0;
+        animation: dash 1s linear;
+      }
+    </style>
+  </head>
+  <body>
+    <svg
+      class="svg_scope"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      width="400px"
+      height="400px"
+    >
+      <!-- <rect x="100" y="100" width="200px" height="200px" fill="none"></rect> -->
+      <circle
+        class="origin_circle"
+        cx="200"
+        cy="200"
+        r="100"
+        fill="none"
+        stroke-width="3"
+        stroke="#eee"
+      />
+      <circle
+        class="circle"
+        cx="200"
+        cy="200"
+        r="100"
+        fill="white"
+        stroke-width="3"
+      />
+    </svg>
+
+    <script>
+      const origin_circle = document.querySelector('.origin_circle');
+      const circle = document.querySelector('.circle');
+
+      // obj.addEventListener('mouseenter', runAnimate);
+
+      // function runAnimate() {
+      //   console.log('run');
+      //   obj.classList.add('circle_hover');
+      //   obj.setAttribute('stroke', '#ac123d');
+      // }
+
+      svgPathLength = circle.getTotalLength() + 'px';
+
+      console.log(svgPathLength);
+      circle.style.strokeDasharray = svgPathLength;
+
+      const createSVGAnimate = document.styleSheets[0];
+      createSVGAnimate.insertRule(
+        `@keyframes dash {
+        from {
+          stroke-dashoffset: ${svgPathLength};
+        }
+        to {
+          stroke-dashoffset: 0;
+        }
+      }`,
+        0,
+      );
+
+      createSVGAnimate.insertRule(
+        `@keyframes dashReverse {
+        from {
+          stroke-dashoffset: 0;
+        }
+        to {
+          stroke-dashoffset: ${svgPathLength};
+        }
+      }`,
+        0,
+      );
+
+      console.log(document.styleSheets);
+    </script>
+  </body>
+</html>

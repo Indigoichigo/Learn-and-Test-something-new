@@ -1,0 +1,193 @@
+@charset "UTF-8";
+/* 最重要的是三個要素 鏡頭 物件 空間 */
+.camera {
+  width: 200px;
+  height: 200px;
+  -webkit-perspective-origin: center center;
+          perspective-origin: center center;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+}
+
+.space {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: relative;
+  text-align: center;
+  -webkit-transform-origin: bottom center -50px;
+          transform-origin: bottom center -50px;
+  -webkit-animation: test 3s infinite linear;
+          animation: test 3s infinite linear;
+}
+
+.box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #069;
+  font-size: 32px;
+}
+
+.box1 {
+  background-color: rgba(255, 0, 0, 0.2);
+  -webkit-transform: translateX(50px) translateY(50px);
+          transform: translateX(50px) translateY(50px);
+}
+
+.box2 {
+  background-color: rgba(111, 90, 243, 0.2);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: translateX(150px) translateY(50px) rotateY(90deg);
+          transform: translateX(150px) translateY(50px) rotateY(90deg);
+}
+
+.box3 {
+  background-color: rgba(109, 178, 234, 0.2);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: translateX(50px) translateY(50px) rotateY(90deg);
+          transform: translateX(50px) translateY(50px) rotateY(90deg);
+}
+
+.box4 {
+  background-color: rgba(100, 78, 34, 0.2);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: translateX(50px) translateY(50px) translateZ(-100px);
+          transform: translateX(50px) translateY(50px) translateZ(-100px);
+}
+
+.box5 {
+  background-color: rgba(71, 98, 189, 0.2);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: translateX(50px) translateY(50px);
+          transform: translateX(50px) translateY(50px);
+}
+
+.box5 {
+  background-color: rgba(71, 98, 189, 0.2);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: translateX(50px) translateY(50px) rotateX(270deg);
+          transform: translateX(50px) translateY(50px) rotateX(270deg);
+}
+
+.box6 {
+  background-color: rgba(98, 98, 31, 0.2);
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  -webkit-transform: translateX(50px) translateY(50px) rotateX(90deg);
+          transform: translateX(50px) translateY(50px) rotateX(90deg);
+}
+
+@-webkit-keyframes test {
+  from {
+    -webkit-transform: rotateX(60deg) rotateY(0deg);
+            transform: rotateX(60deg) rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateX(60deg) rotateY(360deg);
+            transform: rotateX(60deg) rotateY(360deg);
+  }
+}
+
+@keyframes test {
+  from {
+    -webkit-transform: rotateX(60deg) rotateY(0deg);
+            transform: rotateX(60deg) rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateX(60deg) rotateY(360deg);
+            transform: rotateX(60deg) rotateY(360deg);
+  }
+}
+
+.camera2 {
+  margin-top: 100px;
+  width: 200px;
+  height: 200px;
+  -webkit-perspective-origin: top center;
+          perspective-origin: top center;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+}
+
+.space2 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: relative;
+  text-align: center;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-animation: test2 3s infinite linear;
+          animation: test2 3s infinite linear;
+}
+
+.tri {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-width: 0 50px 87px;
+  border-style: solid;
+}
+
+.tri1 {
+  -webkit-transform-origin: center bottom;
+          transform-origin: center bottom;
+  -webkit-transform: translateX(50px) translateY(50px) rotateX(90deg);
+          transform: translateX(50px) translateY(50px) rotateX(90deg);
+  border-color: transparent transparent rgba(214, 13, 231, 0.5);
+}
+
+.tri2 {
+  -webkit-transform-origin: center bottom;
+          transform-origin: center bottom;
+  -webkit-transform: translateX(50px) translateY(50px) rotateX(19.5deg);
+          transform: translateX(50px) translateY(50px) rotateX(19.5deg);
+  border-color: transparent transparent rgba(14, 123, 231, 0.5);
+}
+
+.tri3 {
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(50px) translateY(50px) rotateY(60deg) rotateX(-19.5deg);
+          transform: translateX(50px) translateY(50px) rotateY(60deg) rotateX(-19.5deg);
+  border-color: transparent transparent rgba(141, 132, 31, 0.5);
+}
+
+.tri4 {
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transform: translateX(50px) translateY(50px) rotateY(300deg) rotateX(-19.5deg);
+          transform: translateX(50px) translateY(50px) rotateY(300deg) rotateX(-19.5deg);
+  border-color: transparent transparent rgba(1, 111, 11, 0.5);
+}
+
+@-webkit-keyframes test2 {
+  from {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes test2 {
+  from {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+/*# sourceMappingURL=3dcss.css.map */
